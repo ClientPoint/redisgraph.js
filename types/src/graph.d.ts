@@ -53,6 +53,14 @@ declare class Graph {
      * @returns {Promise<ResultSet>} a promise contains a result set
      */
     query(query: string, params?: Map<any, any>): Promise<ResultSet>;
+     /**
+     * Execute a Cypher readonly query
+     * @async
+     * @param {string} query Cypher query
+     * @param {Map} [params] Parameters map
+     * @returns {Promise<ResultSet>} a promise contains a result set
+     */
+    readonlyQuery(query: string, params?: Map<any, any>): Promise<ResultSet>;
     /**
      * Deletes the entire graph
      * @async
